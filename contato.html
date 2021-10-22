@@ -5,32 +5,65 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contato</title>
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <ul>
+    <ul id="menu">
         <li><a href="index.html">Home</a></li>
         <li><a href="contato.html">Contato</a></li>
     </ul>
 
-    <h1>Entre em contato comigo</h1>
+    <h1 class="center">Entre em contato comigo</h1>
 
-    <form>
-        <label for="nome">Nome:</label>
-        <input type="text"  id="nome">
+    <div class="container mb-50">
+        <div>
 
-        <label for="email">E-mail:</label>
-        <input type="email"  id="email">
-        <br>
-        <br>
-        <label for="assunto">Assunto:</label>
-        <textarea name="assunto" id="assunto" cols="60" rows="5"></textarea>
+            <form>
+                <label for="nome">Nome:</label>
+                <br>
+                <input type="text"  id="nome" onkeyup="validaNome()">
+                <div id="txtNome"></div>
+                <br>     
+                <label for="email">E-mail:</label>
+                <br>
+                <input type="email"  id="email" onkeyup="validaEmail()">
+                <div id="txtEmail"></div>
+                <br>
+                <label for="assunto">Assunto:</label>
+                <br>
+                <textarea name="assunto" id="assunto" cols="60" rows="5" onkeyup="validaAssunto()"></textarea>
+                <div id="txtAssunto"></div>
+                <br>
+                <button onclick="enviar()">Enviar</button>
+            </form>
+        </div>
+        <div class="ml-50">
 
-        <button>Enviar</button>
-    </form>
+            <h2>Endereço:</h2>
+            <p>Rua Sergio augusto, N° 102</p>
+            <p>Cotia, SP</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3655.9274427947607!2d-46.912140585187586!3d-23.60693498466025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cfa9fda90bd167%3A0x83e37f37d3209892!2sR.%20S%C3%A9rgio%20Augusto%2C%20102%20-%20Jardim%20Lina%2C%20Cotia%20-%20SP%2C%2006716-675!5e0!3m2!1spt-BR!2sbr!4v1634754811965!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" onmousemove="mapaZoom()" onmouseout="mapaNormal()" loading="lazy" id=mapa></iframe>
+        </div>
+    </div>
 
-    <h2>Endereço:</h2>
-    <p>Rua Sergio augusto, N° 102</p>
-    <p>Cotia, SP</p>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3655.9274427947607!2d-46.912140585187586!3d-23.60693498466025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cfa9fda90bd167%3A0x83e37f37d3209892!2sR.%20S%C3%A9rgio%20Augusto%2C%20102%20-%20Jardim%20Lina%2C%20Cotia%20-%20SP%2C%2006716-675!5e0!3m2!1spt-BR!2sbr!4v1634754811965!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    <footer>
+
+        <div class="container">
+            <a href="https://github.com/Gus0092" target="blanc">
+                <img class="tm-social p-30" src="assets/img/github.png" alt="Logo do GitHub">
+            </a>
+            
+            <a href="https://github.com/Gus0092" target="blanc">
+                <img class="tm-social p-30" src="assets/img/linkedin.png" alt="Logo do Linkedin">
+            </a>
+           
+        </div>
+
+            <p class="center">
+                
+            Todos os direitos reservados para Gustavo Victor  Cerqueira &copy
+        </p>
+    </footer>
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
